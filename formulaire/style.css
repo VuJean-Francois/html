@@ -1,0 +1,26 @@
+body {
+    background: linear-gradient(90deg, rgb(223, 190, 4), white,black);
+    color:white;
+   
+}
+
+h1,legend {
+    font-size: 2em;
+    color: rgb(18, 20, 22);
+    font-weight: 300;
+    text-decoration: underline;
+}
+
+.element {
+    font-size: 25px;
+    font-weight: 600;
+    background-color: skyblue;
+    border-radius: 10px;
+    padding: 100px;
+}
+
+fieldset {
+    font-size: 1.3em;
+    text-decoration: underline;
+}
+

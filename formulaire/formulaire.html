@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    
+    <title>Formulaire</title>
+</head>
+<body>
+    <div class="banniere"></div>
+    <h1>Formulaire</h1>
+    <form name="premier" method="GET" action="traitement.html">
+        <label for="nom">Nom :</label>
+        <input type="text" name="nom" id="nom" placeholder="Votre Nom">
+        <br>
+        <label for="prenom">Prenom :</label>
+        <input type="text" name="prenom" id="prenom" value="Marie-Christine">
+        <br>
+        <label for="email">Email :</label>
+        <input type="email" name="email" id="email">
+        <br>
+        <br>
+        <!-- Bouton submit-->
+        <button type="submit" name="soumission">Envoyer</button>
+        <br>
+        <br>
+        <form name="gros" method="post" action="traintement.php" enctype="multipart/form-data">
+            <fieldset>
+                <legend>Informations personnelles</legend>
+                <label for="civilite">Civilité</label>
+                <input type="radio" name="civ" id="civ1" value="Mme"><label for="civ1">Madame</label>
+                <input type="radio" name="civ" id="civ2" value="M"><label for="civ1">Monsieur</label>
+                <input type="radio" name="civ" id="civ3" value="Non-Binaire"><label for="civ3">Non-Binaire</label>
+                <br>
+                <label for="nom">Nom:</label>
+                <input type="text" name="nom" id="nom" placeholder="Votre nom" required>
+                <br>
+                <label for="nom">Prénom:</label>
+                <input type="text" name="prenom" id="prenom" placeholder="Votre prenom" required>
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="marie.christine@gmail.com" required>
+                <br>
+                <label for="telephone">Téléphone:</label>
+                <input type="tel" name="telephone" id="telephone" placeholder="0606060606" required max="10">
+                <br>
+                <label for="site">Site internet:</label>
+                <input type="url" name="site" id="site" placeholder="https://vivelabretagne.fr">
+                <br>
+                <label for="motdepasse1">Mot de passe :</label>
+                <input type="password" name="motdepasse" id="motedpasse1" required>
+                <button type="button" name="affiche" onclick="affichePassword();">Voir</button>
+                <br>
+                <label for="motdepasse2">Répéter le mot de passe:</label>
+                <input type="password" name="motdepasse2" id="motedpasse2" required>
+            </fieldset>
+            <fieldset>
+                <legend>En savoir plus sur vous(RGPD friendly)</legend>
+                <label for="datenaissance">Date de naissance</label>
+                <input type="date" name="datenaissance" id="datenaissance"required>
+                <br>
+                <label for="avatar">Montrez nous titi sur son plus beau jour</label>
+                <input type="file" name="avatar" id="avatar">
+                <br>
+                <label for="situation">Situation</label>
+                <select name="situation" id="situation">
+                    <option value="Célibataire">Célibataire</option>
+                    <option value="Concubinage">En concubinage</option>
+                    <option value="pacsé">Pacsé</option>
+                    <option value="Marié">Marié(e)</option>
+                    <option value="Veuf">Veuf/Veuve</option>
+                    <option value="esprit" selected="selected">Avec l'esprit</option>
+                </select>
+                <br>
+                <label for="adresse">Adresse</label>
+                <input type="text"
+                        name="adresse"
+                        id="adresse"
+                        minlength="10"
+                        required
+                        placeholder="Rue du poing 18240 Assigny">
+                        <br>
+                        <label for="cp">Code postale</label>
+                        <input type="number" size="5" min="01000" max="97400">
+                        <br>
+                        <label for="ville">Ville</label>
+                        <input type="texte" name="ville" id="ville" placeholder="Assigny">
+                        <br>
+                        <select name="pays" id="pays">
+                            <optgroup label="Europe">
+                                <option value="France">France</option>
+                                <option value="Espagne">Espagne</option>
+                                <option value="Italie">Italie</option>
+                                <option value="Allemagne">Allemagne</option>
+                                <option value="Belgique">Belgique</option>
+                                <option value="Portugal">Portugal</option>
+                            </optgroup>
+                            <optgroup label="Afrique">
+                                <option value="Algérie">Algérie</option>
+                                <option value="Maroc">Maroc</option>
+                                <option value="Tunisie">Tunisie</option>
+                                <option value="Congo">Congo</option>
+                                <option value="Côte d'Ivoire">Côte d'Ivoire</option>
+                               
+                            </optgroup>
+                            <optgroup label="Moyen Orient">
+                                <option value="Liban">Liban</option>
+                                <option value="Syrie">Syrie</option>
+                                <option value="Jordanie">Jordanie</option>
+                                <option value="Palestine">Palestine/option>
+                            </optgroup>
+                            <optgroup label="Asie">
+                                <option value="Turquie">Turquie</option>
+                                <option value="Japon">Japon</option>
+                                <option value="Chine">Chine</option>
+                                <option value="Russie">Russie</option>
+                            </optgroup>
+                        </select>
+            </fieldset>
+            <fieldset>
+                <legend>Vos centres d'intérêts</legend>
+                <fieldset>
+                    <legend>Vos préférences culinaires</legend>
+                    <input type="checkbox" name="bouffe[]" value="Galette saucisse" id="breton1">
+                    <label for="breton1">Galette saucisse</label>
+                    <br>
+                    <input type="checkbox" name="bouffe[]" value="Couscous" id="maghreb1">
+                    <label for="maghreb1">Couscous</label>
+                    <br>
+                    <input type="checkbox" name="bouffe[]" value="Tajine" id="maghreb2">
+                    <label for="maghreb2">Tajine</label>
+                    <br>
+                    <input type="checkbox" name="bouffe[]" value="Kouign-amann" id="breton2">
+                    <label for="breton2">Kouign-amann</label>
+
+                </fieldset>
+                <fieldset>
+                    <legend>Vos préférences sportives</legend>
+                    <label for="sport">Sélectionnez votre sports favoris</label>
+                    <select name="sport[]" id="sport" multiple>
+                        <option value="Football">Football</option>
+                        <option value="Basket">Basket</option>
+                        <option value="MMA">MMA</option>
+                        <option value="Musculation">Musculation</option>
+                        <option value="Danse">Danse</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <legend>Présenter-vous</legend>
+                    <textarea name="présentation" cols="240" rows="100"></textarea>
+                    <br>
+                    <label for="temps">Quel heure est-il?</label>
+                    <input type="time" name="temps" id="temps">
+                    <br>
+                    <label for="galerie">Envoyez votre album</label>
+                    <input type="file"  id="galerie" name="galerie[]" multiple>
+                    <br>
+                    <label for="couleur">Quel est votre couleur favorite?</label>
+                    <input type="color" name="couleur" id="couleur">
+                </fieldset>
+            </fieldset>
+            <button type="submit" name="submit">Envoyer</button>
+            <input type="reset" name="delete" value="Effacer">
+        </form>
+        <script type="text/javascript">
+           function affichePassword(){
+            // Je vais sélectionner l'élément sur lequel je dois intervenir
+            let champs = document.getElementById('motdepasse1');
+            // Je récupère le type courant
+            let type = champs.getAttribute('type');
+            if(type == 'password'){
+                // Si c'est password je passe en text pour afficher le mot de passe
+                champs.setAttribute('type','text');
+            } else{
+                // Sinon je passe en password pour le cacher
+                champs.setAttribute('type','password');
+            }
+        }
+        </script>
+</body>
+</html>
