@@ -1,0 +1,15 @@
+body {
+    background: linear-gradient(90deg, rgb(4, 223, 194), rgb(255, 255, 255),purple);
+    color:rgb(175, 53, 53);
+    font-weight: 600;
+    background-image: url(C:\Users\jean-fra.vu\Documents\HTML\exercice\images.) ;
+}
+
+legende{
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: 800;
+    text-decoration: underline;
+    color: brown;
+}
+

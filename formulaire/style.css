@@ -9,6 +9,7 @@ h1,legend {
     color: rgb(18, 20, 22);
     font-weight: 300;
     text-decoration: underline;
+    text-align: center;
 }
 
 .element {

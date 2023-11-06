@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulaire</title>
+</head>
+<body>
+    <form name="gros" method="post" action="inscription.php" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Inscription</legend>
+            <label for="civilite">Civilité</label>
+                <input type="radio" name="civ" id="civ1" value="Mme"><label for="civ1">Madame</label>
+                <input type="radio" name="civ" id="civ2" value="M"><label for="civ1">Monsieur</label>
+                <input type="radio" name="civ" id="civ3" value="Non-Binaire"><label for="civ3">Non-Binaire</label>
+                <br>
+                <label for="nom">Nom:</label>
+                <input type="text" name="nom" id="nom" placeholder="Votre nom" required>
+                <br>
+                <label for="nom">Prénom:</label>
+                <input type="text" name="prenom" id="prenom" placeholder="Votre prenom" required>
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="exemple@gmail.com" required>
+                <br>
+                <label for="motdepasse1">Mot de passe :</label>
+                <input type="password" name="motdepasse" id="motedpasse1" required>
+                
+                <br>
+                <label for="motdepasse2">Répéter le mot de passe:</label>
+                <input type="password" name="motdepasse2" id="motedpasse2" required>
+                <br>
+                <label for="nom">Age:</label>
+                <input type="text" name="age" id="age" placeholder="Votre age" required>
+                <br>
+                <label for="photo">Photo de profil</label>
+                <input type="file" name="photo" id="photo">
+                <br>
+                <label for="description">Description</label>
+                <textarea name="description" cols="240" rows="100"></textarea>
+                <br>
+                <button type="submit" name="soumission">Inscription</button>
+        </fieldset>
+    </form>
+
+</body>
+</html>
